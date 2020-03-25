@@ -2,50 +2,37 @@ package org.example.javaee.class01.model;
 
 import java.util.Date;
 
-/**
- * StudentHomework
- *
- * @author wangkm
- * @date 2020-03-05
- * @since 0.0.1
- */
+
 public class StudentHomework {
-
-    private Long id;
-
-    private Long studentId;
-
-    private Long homeworkId;
-
+    private long id;
+    private long studentId;
+    private long homeworkId;
     private String homeworkTitle;
-
     private String homeworkContent;
-
     private Date createTime;
-
     private Date updateTime;
 
-    public Long getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(long id) {
         this.id = id;
     }
 
-    public Long getStudentId() {
+    public long getStudentId() {
         return studentId;
     }
 
-    public void setStudentId(Long studentId) {
+    public void setStudentId(long studentId) {
         this.studentId = studentId;
     }
 
-    public Long getHomeworkId() {
+    public long getHomeworkId() {
         return homeworkId;
     }
 
-    public void setHomeworkId(Long homeworkId) {
+    public void setHomeworkId(long homeworkId) {
         this.homeworkId = homeworkId;
     }
 

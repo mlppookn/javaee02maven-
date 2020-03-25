@@ -12,17 +12,15 @@ import java.io.IOException;
 import java.util.List;
 
 
-@WebServlet("/allHomework")
-public class StudentHomeworkServlet extends HttpServlet {
+@WebServlet("/showHomework")
+public class ShowHomeworkServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
-        //读取所有作业内容
+        //从数据库读取所有作业记录
         List<Homework> list = StudentHomeWorkJdbc.showHomework();
 
         req.setAttribute("list",list);
 
-        //展示给学生
-        req.getRequestDispatcher("jsp/queryAllHomework.jsp").forward(req,resp);
+        req.getRequestDispatcher("jsp/queryStudentHomework.jsp").forward(req,resp);
     }
 }
